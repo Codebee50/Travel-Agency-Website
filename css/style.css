@@ -1,7 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "inter", sans-serif;
+}
+
+:root {
+  --text-color: #212832;
 }
 
 .hero-section {
@@ -11,4 +18,51 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 0 200px;
+}
+.hero-section img {
+  width: 115px;
+  height: 33px;
+}
+.hero-section .top-content-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: -moz-max-content;
+  height: max-content;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+.hero-section .top-content-container .right-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.hero-section .top-content-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  align-items: center;
+}
+.hero-section .top-content-container ul li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  font-weight: 540;
+}
+.hero-section .top-content-container ul li a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--text-color);
+}
+.hero-section .top-content-container ul li .signup-btn {
+  background-color: transparent;
+  padding: 5px 10px;
+  border: 0.7px solid var(--text-color);
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
