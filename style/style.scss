@@ -1,5 +1,10 @@
 @import 'base';
 
+.section{
+    padding: 0 150px;
+
+}
+
 .hero-section{
     width: 100%;
     min-height: 100vh;
@@ -7,9 +12,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0 200px;
 
-    img{
+    .logo-image{
         width: 115px;
         height: 33px;
     }
@@ -20,7 +24,7 @@
         flex-direction: row;
         align-items: center;
         height: max-content;
-        padding-top: 20px;
+        padding-top: 30px;
         justify-content: space-between;
 
         .right-content{
@@ -76,4 +80,36 @@
         }
     }
 
+    .section-body{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        min-height: 60vh;
+        margin-top: 10px;
+        .con-one{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 50%;
+
+            .main-text{
+                font-family: 'Volkhov', serif;
+                font-size: 5rem;
+                font-weight: 700;
+                color: #181E4B;
+            }
+        }
+
+        .con-two{
+            width: 50%;
+            img{
+                width: 95%
+            }
+        }
+    }
+
 }
+
+
+@import 'media';
