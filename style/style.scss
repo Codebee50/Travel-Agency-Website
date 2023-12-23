@@ -51,9 +51,26 @@
 
                 .signup-btn{
                     background-color: transparent;
-                    padding: 5px 10px;
-                    border: 0.7px solid var(--text-color);
+                    padding: 7px 15px;
+                    border: 1.3px solid var(--text-color);
                     border-radius: 5px;
+                    font-weight: 540;
+                    cursor: pointer;
+                }
+
+                .lang-selector{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    cursor: pointer;
+                    p{
+                        font-size: 0.9rem;
+                    }
+
+                    i{
+                        margin-left: 4px;
+                        
+                    }
                 }
             }
         }

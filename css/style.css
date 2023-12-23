@@ -62,7 +62,21 @@
 }
 .hero-section .top-content-container ul li .signup-btn {
   background-color: transparent;
-  padding: 5px 10px;
-  border: 0.7px solid var(--text-color);
+  padding: 7px 15px;
+  border: 1.3px solid var(--text-color);
   border-radius: 5px;
+  font-weight: 540;
+  cursor: pointer;
+}
+.hero-section .top-content-container ul li .lang-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+.hero-section .top-content-container ul li .lang-selector p {
+  font-size: 0.9rem;
+}
+.hero-section .top-content-container ul li .lang-selector i {
+  margin-left: 4px;
 }/*# sourceMappingURL=style.css.map */
