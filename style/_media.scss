@@ -1,4 +1,4 @@
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
     .hero-section{
         padding: 0 90px;
     }
@@ -22,3 +22,16 @@
     }
 }
 
+//mqs for hero section
+@media screen and (max-width: 1260px){
+    .hero-section{
+        .section-body{
+            .con-two{
+                margin-left: -150px;
+                .hero-image{
+                    width: 590px;
+                }
+            }
+        }
+    }
+}

@@ -8,6 +8,10 @@
   font-family: "inter", sans-serif;
 }
 
+button {
+  cursor: pointer;
+}
+
 :root {
   --text-color: #212832;
 }
@@ -96,7 +100,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  max-width: 630px;
+  max-width: 600px;
 }
 .hero-section .section-body .con-one .top-text {
   color: #DF6951;
@@ -110,16 +114,22 @@
 }
 .hero-section .section-body .con-one .main-text {
   font-family: "Volkhov", serif;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 700;
   color: #181E4B;
   line-height: 1.1;
   word-spacing: -8px;
   margin-top: 15px;
+  max-width: 700px;
 }
 .hero-section .section-body .con-one .main-text span {
   display: inline-flex;
   flex-direction: column;
+  width: 230px;
+  background-image: url(/img/decore\ underline.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 314px 12px;
 }
 .hero-section .section-body .con-one .main-text span img {
   display: inline;
@@ -169,7 +179,7 @@
 }
 .hero-section .section-body .con-two {
   margin-left: -180px;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
@@ -180,18 +190,18 @@
 }
 .hero-section .section-body .con-two .p-1 {
   top: 100px;
-  right: 20px;
+  left: 550px;
 }
 .hero-section .section-body .con-two .p-2 {
   top: 70px;
   left: 80px;
 }
 .hero-section .section-body .con-two .hero-image {
-  width: 95%;
+  width: 660px;
   z-index: 999;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1200px) {
   .hero-section {
     padding: 0 90px;
   }
@@ -209,5 +219,13 @@
 @media screen and (max-width: 990px) {
   .hero-section {
     padding: 0 20px;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .hero-section .section-body .con-two {
+    margin-left: -150px;
+  }
+  .hero-section .section-body .con-two .hero-image {
+    width: 590px;
   }
 }/*# sourceMappingURL=style.css.map */
