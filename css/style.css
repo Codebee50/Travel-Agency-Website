@@ -47,7 +47,7 @@ button {
   flex-direction: row;
   align-items: center;
 }
-.hero-section .top-content-container ul {
+.hero-section .top-content-container .right-content ul {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -55,7 +55,12 @@ button {
        column-gap: 40px;
   align-items: center;
 }
-.hero-section .top-content-container ul li {
+.hero-section .top-content-container .right-content ul #close-nav {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  display: none;
+}
+.hero-section .top-content-container .right-content ul li {
   text-decoration: none;
   list-style: none;
   margin: 0 0.5rem;
@@ -63,12 +68,12 @@ button {
   color: var(--text-color);
   font-weight: 540;
 }
-.hero-section .top-content-container ul li a {
+.hero-section .top-content-container .right-content ul li a {
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--text-color);
 }
-.hero-section .top-content-container ul li .signup-btn {
+.hero-section .top-content-container .right-content ul li .signup-btn {
   background-color: transparent;
   padding: 7px 15px;
   border: 1.3px solid var(--text-color);
@@ -76,17 +81,23 @@ button {
   font-weight: 540;
   cursor: pointer;
 }
-.hero-section .top-content-container ul li .lang-selector {
+.hero-section .top-content-container .right-content ul li .lang-selector {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
 }
-.hero-section .top-content-container ul li .lang-selector p {
+.hero-section .top-content-container .right-content ul li .lang-selector p {
   font-size: 0.9rem;
 }
-.hero-section .top-content-container ul li .lang-selector i {
+.hero-section .top-content-container .right-content ul li .lang-selector i {
   margin-left: 4px;
+}
+.hero-section .top-content-container .right-content #mobile {
+  display: none;
+}
+.hero-section .top-content-container .right-content #mobile i {
+  font-size: 2rem;
 }
 .hero-section .section-body {
   width: 100%;
@@ -94,6 +105,7 @@ button {
   flex-direction: row;
   min-height: 60vh;
   margin-top: 10px;
+  display: none;
 }
 .hero-section .section-body .con-one {
   display: flex;
@@ -101,6 +113,7 @@ button {
   align-items: flex-start;
   justify-content: center;
   max-width: 600px;
+  padding: 20px 0;
 }
 .hero-section .section-body .con-one .top-text {
   color: #DF6951;
@@ -198,7 +211,21 @@ button {
 }
 .hero-section .section-body .con-two .hero-image {
   width: 660px;
-  z-index: 999;
+  z-index: 99;
+}
+
+.nav-overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 900;
+  display: none;
+}
+
+.nav-overlay.visible {
+  display: block;
 }
 
 @media screen and (max-width: 1200px) {
@@ -219,6 +246,35 @@ button {
 @media screen and (max-width: 990px) {
   .hero-section {
     padding: 0 20px;
+  }
+}
+@media screen and (max-width: 930px) {
+  .hero-section .top-content-container .right-content .navbar {
+    z-index: 999;
+    background-color: wheat;
+    top: 0;
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    transition: right ease-in-out 0.3s;
+    right: -500px;
+  }
+  .hero-section .top-content-container .right-content .navbar #close-nav {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+  }
+  .hero-section .top-content-container .right-content .navbar.visible {
+    right: 0;
+  }
+  .hero-section .top-content-container .right-content #mobile {
+    display: block;
   }
 }
 @media screen and (max-width: 1260px) {
