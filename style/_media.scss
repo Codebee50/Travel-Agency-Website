@@ -57,7 +57,16 @@
                 }
             }
         }
+
+        
     }
+
+    .nav-overlay.visible{
+        display: block;
+    }
+
+   
+    
     
 }
 
@@ -70,7 +79,225 @@
                 .hero-image{
                     width: 590px;
                 }
+
+               .p-1{
+                left: 500px;
+               }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .hero-section{
+        .section-body{
+            .con-two{
+                margin-left: -150px;
+                // .hero-image{
+                //     width: 590px;
+                // }
+
+               .p-1{
+                    display: none;
+               }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1125px){
+    .hero-section{
+        .section-body{
+        
+            .con-one{
+                .main-text{
+                    font-size: 4rem;
+                }
+            }
+         
+        }
+    }
+}
+
+@media screen and (max-width: 910px){
+    .hero-section{
+        .section-body{
+        
+            .con-one{
+                .main-text{
+                    font-size: 3.7rem;
+                }
+            }
+         
+        }
+    }
+}
+
+
+@media screen and (max-width: 830px){
+    .hero-section{
+        .section-body{
+            .con-two{
+
+                .hero-image{
+                    width: 500px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 766px){
+    .hero-section{
+        .section-body{
+            .con-one{
+                .main-text{
+                    font-size: 3rem !important;
+                    word-spacing: -5px;
+                    span{
+                        background-size: 200px 11px;
+
+                    }
+                }
+                .bottom-text{
+                    max-width: 300px;
+                }
+            }
+            .con-two{
+
+                .hero-image{
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px){
+    .hero-section{
+        .section-body{
+            .con-one{
+                .main-text{
+                    font-size: 2.5rem !important;
+
+                    span{
+                        background-size: 200px 7px;
+
+                    }
+                }
+                .bottom-text{
+                    max-width: 300px;
+                }
+            }
+            .con-two{
+
+                .hero-image{
+                    width: 450px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 718px){
+    .hero-section{
+        .section-body{
+            .con-one{
+                .main-text{
+                    font-size: 2.3rem !important;
+                    max-width: 500px !important;
+
+                    span{
+                        background-size: 200px 7px;
+
+                    }
+                }
+                .bottom-text{
+                    max-width: 300px;
+                }
+            }
+            .con-two{
+
+                .hero-image{
+                    width: 420px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px){
+    .hero-section{
+        .section-body{
+            flex-direction: column-reverse;
+            .con-one{
+                .main-text{
+                    font-size: 4.5rem !important;
+                    max-width: 500px !important;
+
+                    span{
+                        background-size: 200px 7px;
+
+                    }
+                }
+                .bottom-text{
+                    max-width: 300px;
+                }
+            }
+            .con-two{
+
+                .hero-image{
+                    width: 100%;
+                    max-width: 550px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 868px){
+    .hero-section{
+        .section-body{
+
+
+        
+            .con-one{
+                border: 1px solid red;
+                .top-text{
+                    font-size: 0.85rem;
+                }
+            
+                .main-text{
+                    font-size: 3.5rem;
+                }
+
+                .bottom-text{
+                    font-size: 0.8rem;
+                }
+            }
+
+            .con-two{
+                border: 1px solid black;
+            }
+         
+        }
+    }
+}
+
+@media screen and (max-width: 1216px ) and (min-width: 1201px){
+    .hero-section{
+        .section-body{
+        
+            .con-one{
+                .main-text{
+                    font-size: 4rem;
+                }
+            }
+         
         }
     }
 }

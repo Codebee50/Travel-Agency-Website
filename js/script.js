@@ -4,8 +4,8 @@ const btnCloseNav = document.getElementById('close-nav')
 const navOverlay = document.querySelector('.nav-overlay')
 
 function showNav(){
-    navbar.classList.add('visible')
     navOverlay.classList.add('visible')
+    navbar.classList.add('visible')
 }
 
 function closeNav(){
