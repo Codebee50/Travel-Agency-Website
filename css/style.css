@@ -1112,9 +1112,11 @@ button {
     flex-direction: column;
   }
   .what-people-say-section .left-content {
+    width: 90%;
     max-width: 500px;
   }
   .what-people-say-section .right-content {
+    width: 90%;
     margin-top: 50px;
     margin-left: 0;
     max-width: 500px;

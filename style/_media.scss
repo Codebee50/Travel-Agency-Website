@@ -489,10 +489,12 @@
     .what-people-say-section{
         flex-direction: column;
         .left-content{
+            width: 90%;
             max-width: 500px;
         }
 
         .right-content{
+            width: 90%;
             margin-top: 50px;
             margin-left: 0;
             max-width: 500px;
