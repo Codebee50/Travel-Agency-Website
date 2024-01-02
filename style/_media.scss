@@ -519,7 +519,7 @@
     }
 }
 
-@media screen and (max-width: 380px){
+@media screen and (max-width: 390px){
     .steps-section{
         .right-content{
             .post-card{
@@ -570,3 +570,18 @@
 }
 
 
+@media screen and (max-width: 600px){
+    .section-intro{
+        .category-intro-txt{
+            align-self: flex-start;
+        }
+    }
+}
+
+@media screen and (max-width: 465px){
+    .section-intro{
+        .top-selling-intro-txt{
+            align-self: flex-start;
+        }
+    }
+}

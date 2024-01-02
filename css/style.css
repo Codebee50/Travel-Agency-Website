@@ -1036,7 +1036,7 @@ button {
     margin-top: 20px;
   }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 390px) {
   .steps-section .right-content .post-card {
     width: 95%;
   }
@@ -1062,5 +1062,15 @@ button {
     font-family: "Volkhov", serif;
     font-size: 2.5rem;
     margin-top: 6px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .section-intro .category-intro-txt {
+    align-self: flex-start;
+  }
+}
+@media screen and (max-width: 465px) {
+  .section-intro .top-selling-intro-txt {
+    align-self: flex-start;
   }
 }/*# sourceMappingURL=style.css.map */
