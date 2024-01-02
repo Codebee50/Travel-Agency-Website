@@ -640,6 +640,7 @@
     }
 
     .right-content{
+        position: relative;
         .post-card{
             width: 370px;
             height: 400px;
@@ -694,6 +695,108 @@
                     margin-right: 20px;
                 }
             }
+
+            .last-bottom{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 30px;
+
+                .people-count{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    
+                    p{
+                        margin-left: 20px;
+                        color: #84829A;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        .shadow-ellipse{
+            position: absolute;
+            // bottom: -100px;
+            // left: -90px;
+            z-index: -1;
+            top: -100px;
+            right: -100px;
+            width: 354px;
+            filter: blur(75px);
+            opacity: 0.8;
+
+        }
+        .ongoing-trip-card{
+            position: absolute;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+            display: flex;
+            flex-direction: row;
+            border-radius: 18px;
+            width: 263px;
+            top: 200px;
+            left: 205px;            
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .ongoing-content{
+                margin-left: 20px;
+
+                .top-text{
+                    color: #84829A;
+                    font-size: 14px;
+                    font-family: 'Poppins', sans-serif;
+                }
+
+                .main-txt{
+                    color: black;
+                    font-size: 18px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
+                    margin-top: 7px;
+                }
+
+                .progress-container{
+                    margin-top: 7px;
+
+                    p{
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        letter-spacing: -0.77px;
+
+                        span{
+                            color: #8A79DF;
+                        }
+                    }
+
+                    progress {
+                        border-radius: 7px; 
+                        width: 100%;
+                        height: 5px;
+                      }
+                      progress::-webkit-progress-bar {
+                        background-color: #ebeaee;
+                      }
+                      progress::-webkit-progress-value {
+                        border-radius: 7px;
+                        background-color: #8A79DF;
+                      }
+                }
+            }
+            
+
+           
+
         }
     }
 }

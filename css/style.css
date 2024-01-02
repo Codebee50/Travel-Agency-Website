@@ -560,6 +560,9 @@ button {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
 }
+.steps-section .right-content {
+  position: relative;
+}
 .steps-section .right-content .post-card {
   width: 370px;
   height: 400px;
@@ -609,6 +612,92 @@ button {
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+}
+.steps-section .right-content .post-card .last-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.steps-section .right-content .post-card .last-bottom .people-count {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.steps-section .right-content .post-card .last-bottom .people-count p {
+  margin-left: 20px;
+  color: #84829A;
+  font-size: 16px;
+}
+.steps-section .right-content .shadow-ellipse {
+  position: absolute;
+  z-index: -1;
+  top: -100px;
+  right: -100px;
+  width: 354px;
+  filter: blur(75px);
+  opacity: 0.8;
+}
+.steps-section .right-content .ongoing-trip-card {
+  position: absolute;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 100px 80px 0px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: row;
+  border-radius: 18px;
+  width: 263px;
+  top: 200px;
+  left: 205px;
+}
+.steps-section .right-content .ongoing-trip-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content {
+  margin-left: 20px;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .top-text {
+  color: #84829A;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .main-txt {
+  color: black;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  margin-top: 7px;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .progress-container {
+  margin-top: 7px;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .progress-container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.77px;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .progress-container p span {
+  color: #8A79DF;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .progress-container progress {
+  border-radius: 7px;
+  width: 100%;
+  height: 5px;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .progress-container progress::-webkit-progress-bar {
+  background-color: #ebeaee;
+}
+.steps-section .right-content .ongoing-trip-card .ongoing-content .progress-container progress::-webkit-progress-value {
+  border-radius: 7px;
+  background-color: #8A79DF;
 }
 
 .nav-overlay {
