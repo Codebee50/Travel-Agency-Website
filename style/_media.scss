@@ -312,6 +312,15 @@
             }
         }
     }
+
+    .steps-section{
+        .right-content{
+            .shadow-ellipse{
+                right: -20px;
+            }
+        }
+     
+    }
 }
 
 @media screen and (max-width: 450px){
@@ -458,4 +467,106 @@
         }
     }
 }
+
+
+//media queries for steps section
+@media screen and (max-width: 1094px){
+    .steps-section{
+        flex-direction: column;
+
+        .left-content{
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .right-content{
+            width: 90%;
+            max-width: 500px;
+            margin-top: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 514px){
+    .top-selling-section{
+        .top-selling-content{
+            .top-selling-content-container{
+                display: flex;
+                flex-direction: column;
+                .top-selling-item{
+                    width: 95%;
+                }
+            }
+        }
+    }
+
+    .steps-section{
+        .right-content{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .ongoing-trip-card{
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 370px;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px){
+    .steps-section{
+        .right-content{
+            .post-card{
+                width: 95%;
+            }
+
+            .ongoing-trip-card{
+                width: 95%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 325px){
+    .top-selling-section{
+        .top-selling-content{
+            .top-selling-content-container{
+                .top-selling-item{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .steps-section{
+        .right-content{
+            .ongoing-trip-card{
+               width: 100%;
+            }
+        }
+    }
+
+    .section-intro{
+        display: flex;
+        
+            p{
+                font-size: 1rem;
+                
+            }
+    
+            h1{
+                color: #14183E;
+                font-family: 'Volkhov', serif;
+                font-size: 2.5rem;
+                margin-top: 6px;
+            }
+    }
+}
+
 
