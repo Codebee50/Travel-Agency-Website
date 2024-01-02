@@ -485,6 +485,19 @@
             margin-top: 50px;
         }
     }
+
+    .what-people-say-section{
+        flex-direction: column;
+        .left-content{
+            max-width: 500px;
+        }
+
+        .right-content{
+            margin-top: 50px;
+            margin-left: 0;
+            max-width: 500px;
+        }
+    }
 }
 
 @media screen and (max-width: 514px){
