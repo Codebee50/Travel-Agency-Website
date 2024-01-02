@@ -893,7 +893,10 @@
                 margin-left: 20px;
                 display: flex;
                 flex-direction: column;
-                row-gap: 40px;
+
+                .bottom-arrow{
+                    margin-top: 40px;
+                }
 
                 i{
                     font-size: 1.4rem;

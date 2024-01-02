@@ -789,7 +789,9 @@ button {
   margin-left: 20px;
   display: flex;
   flex-direction: column;
-  row-gap: 40px;
+}
+.what-people-say-section .right-content .comment-con-con .comments-controller .bottom-arrow {
+  margin-top: 40px;
 }
 .what-people-say-section .right-content .comment-con-con .comments-controller i {
   font-size: 1.4rem;
