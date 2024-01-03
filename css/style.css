@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Volkhov:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
 * {
   padding: 0;
@@ -15,6 +15,7 @@ button {
 
 :root {
   --text-color: #212832;
+  --text-color-2: #5E6282;
   --section-top: 60px;
 }
 
@@ -907,6 +908,93 @@ button {
   font-family: "Open sans", sans-serif;
   font-size: 17px;
   font-weight: 600;
+}
+
+footer {
+  width: 100%;
+  margin-top: 200px;
+  position: relative;
+  padding-bottom: 60px;
+}
+footer .footer-decore {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+footer .footer-section {
+  width: 100%;
+  display: grid;
+  min-height: 30vh;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: flex-start;
+  justify-items: start;
+}
+footer .footer-section .footer-item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+footer .footer-section .footer-item h1 {
+  color: #181E4B;
+  font-size: 44px;
+  font-family: "Poppins", sans-serif;
+}
+footer .footer-section .footer-item h3 {
+  font-family: "Poppins", sans-serif;
+  color: #080809;
+  font-weight: 700;
+}
+footer .footer-section .footer-item .p-1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+  color: var(--text-color-2);
+  max-width: 207px;
+  margin-top: 15px;
+}
+footer .footer-section .footer-item .footer-anchors {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+footer .footer-section .footer-item .footer-anchors a {
+  text-decoration: none;
+  color: var(--text-color-2);
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  font-size: 18px;
+}
+footer .footer-section .footer-item .socials-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+footer .footer-section .footer-item .p-2 {
+  color: var(--text-color-2);
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 5px;
+}
+footer .footer-section .footer-item .app-stores-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 7px;
+}
+footer .footer-section .footer-item .app-stores-container .app-store {
+  cursor: pointer;
+}
+footer .footer-section .footer-item .app-stores-container .apple {
+  margin-left: 5px;
+}
+footer .copyright-text {
+  margin-top: 10px;
+  text-align: center;
+  color: var(--text-color-2);
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
 }
 
 .nav-overlay {

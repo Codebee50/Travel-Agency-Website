@@ -1036,6 +1036,116 @@
     }
 }
 
+footer{
+    width: 100%;
+    // background-image: url(/img/footer-decor.png);
+    // background-repeat: no-repeat;
+    // background-position: right bottom ;
+    // background-size: 100px;
+    margin-top: 200px;
+    position: relative;
+    padding-bottom: 60px;
+
+    .footer-decore{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+    .footer-section{
+        width: 100%;
+        display: grid;
+        min-height: 30vh;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        align-items: flex-start;
+        justify-items: start;
+        
+
+        .footer-item{
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+
+            h1{
+                color: #181E4B;
+                font-size: 44px;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            h3{
+                font-family: 'Poppins', sans-serif;
+                color: #080809;
+                font-weight: 700;
+            }
+
+            .p-1{
+                font-family: 'Poppins', sans-serif;
+                font-size: 13px;
+                color:var(--text-color-2);
+                max-width: 207px;
+                margin-top: 15px;
+            }
+
+            .footer-anchors{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 15px;
+
+                a{
+                    text-decoration: none;
+                    color: var(--text-color-2);
+                    font-family: 'Poppins', sans-serif;
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+
+            }
+
+            .socials-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .p-2{
+                color: var(--text-color-2);
+                font-family: 'Poppins', sans-serif;
+                font-size: 18px;
+                text-align: center;
+                margin-top: 5px;
+            }
+
+            .app-stores-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-top: 7px;
+
+                .app-store{
+                    cursor: pointer;
+                }
+                
+                .apple{
+                    margin-left: 5px;
+                }
+            }
+
+        }
+    
+    }
+
+    .copyright-text{
+        margin-top: 10px;
+        text-align: center;
+        color: var(--text-color-2);
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+
 .nav-overlay{
     width: 100%;
     height: 100vh;
