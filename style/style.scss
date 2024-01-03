@@ -955,6 +955,8 @@
 
         .dec-img{
             position: absolute;
+            opacity: 0.1;
+            z-index: 1;
         }
 
         .dec-img.bottom{
@@ -975,6 +977,8 @@
 
         .section-content{
             margin-top: 50px;
+            z-index: 2;
+            padding: 20px;
             h1{
                 color: #5E6282;
                 max-width: 881px;
@@ -993,25 +997,30 @@
 
                 .email-field{
                     background-color: white;
-                    width: 90%;
+                    width: 70%;
                     max-width: 421px;
-                    padding: 20px;
                     border-radius: 10px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
+                    height: 68px;
+                    padding: 0.9rem 20px;
 
                     input[type=text]{
                         border: none;
                         outline: none;
                         margin-left: 10px;
+                        width: 100%;
+                        height: 100%;
                     }
 
 
                 }
 
                 button{
-                    padding: 20px;
+                    width: 30%;
+                    max-width: 180px;
+                    height: 68px;
                     background-color: #FF946D;
                     border: none;
                     outline: none;
