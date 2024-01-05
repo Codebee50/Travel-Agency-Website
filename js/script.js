@@ -3,87 +3,101 @@ const navbar = document.querySelector(".navbar");
 const btnCloseNav = document.getElementById("close-nav");
 const navOverlay = document.querySelector(".nav-overlay");
 const switchCommentDown = document.getElementById("scd");
-const swtichCommentUp = document.getElementById('scu')
+const swtichCommentUp = document.getElementById("scu");
 const commentContainer = document.querySelector(".comments-container");
+const dotsContainer = document.querySelector(".dots-container");
 
 class Comment {
-  constructor(body, commentator, title, type, id) {
+  constructor(body, commentator, title, type, id, imagePath) {
     this.body = body;
     this.commentator = commentator;
     this.title = title;
     this.type = type;
     this.id = id;
+    this.imagePath = imagePath;
   }
 }
 
 const commentList = [];
 commentList.push(
   new Comment(
-    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
+    "This agency is awesome.. They have a lot of options and flexibility to suit your needs and budget. I will definitely use them again.",
     "Mike taylor",
     "Lahore, Pakistan",
     "main-comment",
-    0
+    0,
+    "img/commentator-one.png"
   )
 );
 
 commentList.push(
   new Comment(
-    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
-    "Chris Thomas",
+    "I had a wonderful time in Bali thanks to this agency They arranged everything perfectly and were very helpful kudos to all the staff",
+    "Maya Evelyn",
     "CEO of Red Button",
     "background-comment",
-    1
+    1,
+    "img/comt-two.png"
   )
 );
 
 commentList.push(
   new Comment(
-    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
-    "Onuh Kyrian",
-    "CEO of Datagridder",
+    "This is the best travel agency ever! They offer great deals and amazing customer service. I highly recommend them, a pure experience.",
+    "John Jones",
+    "Customer",
     "background-comment",
-    2
+    2,
+    "img/comt-one.png"
   )
 );
 
 commentList.push(
   new Comment(
-    "On the Windows talking painted pasture yet its express parties use. Sure last upon he same as knew next. Of believed or diverted no.",
-    "Emmanuel Jahi",
-    "Founder at apple",
+    "A very professional and reliable travel agency. They expertly planned our family vacation to Disney World and it was an huge blast!.",
+    "Iris Willow",
+    "Founder at Sydtech",
     "background-comment",
-    3
+    3,
+    "img/comt-three.png"
   )
 );
 
+populateDots(commentList)
 populateCommentsUi(commentList);
-console.log(document.querySelectorAll('.comment-body'))
-console.log(document.querySelectorAll('.comment-item'))
-
 
 //populates the comment container with a list of comments
-function populateCommentsUi(comments, nextIndex) {
+function populateCommentsUi(comments, backwards = false) {
   commentContainer.innerHTML = "";
-
   let mainCommentIndex = commentList.findIndex(
     (comment) => comment.type === "main-comment"
   );
-  addComment(commentList[mainCommentIndex]);
-  addComment(commentList[mainCommentIndex + 1]);
 
-  comments.forEach(function (comment, index) { 
-    if (comment.type !== "main-comment" && index !== (mainCommentIndex + 1))
+  if (backwards) {
+    addComment(commentList[mainCommentIndex]);
+    addComment(commentList[mainCommentIndex + 1]);
+  }
+
+  comments.forEach(function (comment, index) {
+    if (comment.type !== "main-comment" && index !== mainCommentIndex + 1)
       addComment(comment);
     // else mainCommentIndex = index;
   });
+
+  if (!backwards) {
+    addComment(commentList[mainCommentIndex]);
+    addComment(commentList[mainCommentIndex + 1]);
+  }
+
+  selectDot(commentList)
 }
 
 //adds a new comment item to the ui comment container
 function addComment(comment) {
   const htmlContent = `<div class="comment-item ${comment.type}">
-    <img src="img/commentator-one.png" alt="Good comment on Jadoo">
-
+    <div class="image-container">
+        <img src="${comment.imagePath}" alt="Good comment on Jadoo">
+    </div>
     <div class="comment-body" id="${comment.id}">
         <p class="comment-text">“${comment.body}”</p>
 
@@ -93,6 +107,28 @@ function addComment(comment) {
 </div>`;
 
   commentContainer.innerHTML += htmlContent;
+}
+
+function populateDots(commentList){
+  dotsContainer.innerHTML = ''
+  commentList.forEach(function(comment){
+    const dotHtml = comment.type === 'main-comment'?`<div class="dot selected" data-dotid="${comment.id}" id="dot-${comment.id}"></div>`: `<div class="dot" data-dotid="${comment.id}" id="dot-${comment.id}"></div>`;
+    dotsContainer.insertAdjacentHTML('beforeend', dotHtml);
+  })
+}
+
+function selectDot(commentList){
+  document.querySelectorAll('.dot').forEach(function(dot){
+    dot.classList.remove('selected')
+  })
+
+  for(const comment of commentList){
+    if(comment.type === 'main-comment'){
+      const selecteddot = document.getElementById(`dot-${comment.id}`)
+      selecteddot.classList.add('selected') 
+      break;//we found our dot, no more need to search
+    }
+  }
 }
 
 switchCommentDown.addEventListener("click", function () {
@@ -122,7 +158,7 @@ switchCommentDown.addEventListener("click", function () {
   }
 });
 
-swtichCommentUp.addEventListener("click", function(){
+swtichCommentUp.addEventListener("click", function () {
   let index = 0;
   for (const comment of commentList) {
     //get the comment from the ui
@@ -130,26 +166,24 @@ swtichCommentUp.addEventListener("click", function(){
     if (comment.type === "main-comment") {
       //this is the comment currently at the top
       const nextComment = commentList.slice(-1)[0]; //get the last comment in the list
-      console.log(nextComment)
       if (nextComment) {
         mainCommentBody.style.transform = "translate(0, 50%)"; //moving the comment at the top downward
-        console.log(document.querySelectorAll('.comment-body'))
         const nextCommentBody = document.getElementById(nextComment.id);
-        nextCommentBody.style.transform = "translate(0, -90px)"; //moving the comment below it upward
+        nextCommentBody.style.transform = "translate(0, -50%)"; //moving the comment below it upward
 
         comment.type = "background-comment"; //making the comment at the top a background comment
         nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
 
         commentList.push(commentList.shift()); //rearaging the array so the comment at the top is now the last
         setTimeout(() => {
-          populateCommentsUi(commentList); //re populating the comment container
+          populateCommentsUi(commentList, true); //re populating the comment container
         }, 500);
       }
       break;
     }
     index++;
   }
-})
+});
 
 function showNav() {
   navOverlay.classList.add("visible");

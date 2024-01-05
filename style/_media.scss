@@ -683,3 +683,12 @@
      }
 }
 
+@media screen and (max-width: 1468px){
+    .steps-section{
+        justify-content: space-around;
+        .right-content{
+            margin-right: 0;
+        }
+    }
+}
+

@@ -531,7 +531,7 @@ button {
   flex-direction: row;
   margin-top: 100px;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 .steps-section .left-content {
   display: flex;
@@ -563,6 +563,7 @@ button {
 }
 .steps-section .right-content {
   position: relative;
+  margin-right: 100px;
 }
 .steps-section .right-content .post-card {
   width: 370px;
@@ -745,7 +746,26 @@ button {
   z-index: 3;
   transition: all ease-in-out 0.5s;
 }
-.what-people-say-section .right-content .comments-container .comment-item img {
+.what-people-say-section .right-content .comments-container .comment-item .image-container {
+  width: 68px;
+  height: 68px;
+  background-color: var(--text-color-2);
+  border-radius: 50%;
+  z-index: 9999;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+}
+.what-people-say-section .right-content .comments-container .comment-item .image-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   display: block;
 }
 .what-people-say-section .right-content .comments-container .comment-item .comment-body {
@@ -791,13 +811,21 @@ button {
   top: 130px;
   z-index: 2;
 }
-.what-people-say-section .right-content .comments-container .comment-item.background-comment img {
+.what-people-say-section .right-content .comments-container .comment-item.background-comment .image-container {
+  display: none;
+}
+.what-people-say-section .right-content .comments-container .comment-item.background-comment .image-container img {
   display: none;
 }
 .what-people-say-section .right-content .comments-container .comment-item.background-comment .comment-body {
   box-shadow: none;
   border: 1px solid #f4f4f6;
   margin-left: 40px;
+}
+.what-people-say-section .right-content .comments-container .comment-item.background-comment .comment-body .comment-text {
+  max-height: 250px;
+  word-wrap: nowrap;
+  overflow: hidden;
 }
 @keyframes swipein {
   0% {
@@ -1451,5 +1479,13 @@ footer .copyright-text {
     margin-top: 10px;
     max-width: 100%;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 1468px) {
+  .steps-section {
+    justify-content: space-around;
+  }
+  .steps-section .right-content {
+    margin-right: 0;
   }
 }/*# sourceMappingURL=style.css.map */
