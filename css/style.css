@@ -743,15 +743,15 @@ button {
 }
 .what-people-say-section .right-content .comments-container .comment-item {
   position: relative;
-  z-index: 3;
   transition: all ease-in-out 0.5s;
 }
 .what-people-say-section .right-content .comments-container .comment-item .image-container {
   width: 68px;
+  position: relative;
   height: 68px;
   background-color: var(--text-color-2);
   border-radius: 50%;
-  z-index: 9999;
+  z-index: 99;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -778,6 +778,8 @@ button {
   margin-top: -18px;
   background-color: white;
   transition: all ease-in-out 0.5s;
+  z-index: 3;
+  position: relative;
 }
 .what-people-say-section .right-content .comments-container .comment-item .comment-body .comment-text {
   color: #5E6282;
@@ -796,20 +798,9 @@ button {
   font-size: 14px;
   margin-top: 5px;
 }
-@keyframes swipeout {
-  0% {
-    transform: translate(0, 50px);
-  }
-  100% {
-    position: absolute;
-    top: 130px;
-    z-index: 2;
-  }
-}
 .what-people-say-section .right-content .comments-container .comment-item.background-comment {
   position: absolute;
   top: 130px;
-  z-index: 2;
 }
 .what-people-say-section .right-content .comments-container .comment-item.background-comment .image-container {
   display: none;
@@ -821,6 +812,8 @@ button {
   box-shadow: none;
   border: 1px solid #f4f4f6;
   margin-left: 40px;
+  z-index: 2;
+  position: relative;
 }
 .what-people-say-section .right-content .comments-container .comment-item.background-comment .comment-body .comment-text {
   max-height: 250px;

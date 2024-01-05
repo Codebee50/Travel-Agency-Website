@@ -837,15 +837,15 @@
 
             .comment-item{
                 position: relative;
-                z-index: 3;
                 transition: all ease-in-out 0.5s;
 
                 .image-container{
                     width: 68px;
+                    position: relative;
                     height: 68px;
                     background-color: var(--text-color-2);
                     border-radius: 50%;
-                    z-index: 9999;
+                    z-index: 99;
                     object-fit: cover;
                     object-position: center;
                     display: block;
@@ -869,6 +869,9 @@
                     margin-top: -18px;
                     background-color: white;
                     transition: all ease-in-out 0.5s;
+                    z-index: 3;
+                    position: relative;
+
                     .comment-text{
                         color: #5E6282;
                         font-family: 'Poppins', sans-serif;
@@ -897,23 +900,12 @@
             }
 
     
-            @keyframes swipeout {
-                0%{
-                    transform: translate(0, 50px);
-                }
-                100%{
-                    position: absolute;
-                    top: 130px;
-                    z-index: 2;
-                }
-            }
+            
 
-           
 
             .comment-item.background-comment{
                 position: absolute;
                 top: 130px;
-                z-index: 2;
                 // animation: swipein 2s ease-in-out forwards;
 
                .image-container{
@@ -927,6 +919,8 @@
                     box-shadow: none;
                     border: 1px solid #f4f4f6;
                     margin-left: 40px;
+                    z-index: 2;
+                    position: relative;
 
                     .comment-text{
                         max-height: 250px;

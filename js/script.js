@@ -135,17 +135,25 @@ switchCommentDown.addEventListener("click", function () {
       //this is the comment currently at the top
       const nextComment = commentList[index + 1]; //get the comment below it
       if (nextComment) {
-        mainCommentBody.style.transform = "translate(0, 50px)"; //moving the comment at the top downward
+        mainCommentBody.style.transform = "translate(-80px, 0px)";
+
+        setTimeout(()=>{
+          mainCommentBody.style.zIndex = "1"
+
+        }, 100)
         const nextCommentBody = document.getElementById(nextComment.id);
-        nextCommentBody.style.transform = "translate(0, -90px)"; //moving the comment below it upward
+        setTimeout(() => {
+          mainCommentBody.style.transform = "translate(30px, 50px)"; 
 
-        comment.type = "background-comment"; //making the comment at the top a background comment
-        nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
+        }, 300);
 
+  
         commentList.push(commentList.shift()); //removing the element at the top of the list and adding it to the bottom of the list
         setTimeout(() => {
+          comment.type = "background-comment"; //making the comment at the top a background comment
+          nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
           populateCommentsUi(commentList); //re populating the comment container
-        }, 500);
+        }, 700);
       }
       break;
     }
@@ -162,15 +170,29 @@ swtichCommentUp.addEventListener("click", function () {
       //this is the comment currently at the top
       const nextComment = commentList.slice(-1)[0]; //get the last comment in the list
       if (nextComment) {
-        mainCommentBody.style.transform = "translate(0, 50%)"; //moving the comment at the top downward
         const nextCommentBody = document.getElementById(nextComment.id);
-        nextCommentBody.style.transform = "translate(0, -50%)"; //moving the comment below it upward
+        nextCommentBody.style.transform = "translate(-50px, -50%)"; //moving the comment below it upward
 
-        comment.type = "background-comment"; //making the comment at the top a background comment
-        nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
+        setTimeout(() => {
+          nextCommentBody.style.zIndex = "9"
+        }, 200);
+
+
+        
+        setTimeout(() =>{
+
+          mainCommentBody.style.zIndex = "3"
+
+        mainCommentBody.style.transform = "translate(0, 50%)"; //moving the comment at the top downward
+
+          nextCommentBody.style.transform = "translate(0, 5px)"
+        }, 400)
+       
 
         commentList.unshift(commentList.pop()); //removing the element a the bottom of the list and adding it to the top of this list
         setTimeout(() => {
+          comment.type = "background-comment"; //making the comment at the top a background comment
+          nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
           populateCommentsUi(commentList, true); //re populating the comment container
         }, 500);
       }
