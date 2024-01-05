@@ -832,9 +832,12 @@
         align-items: center;
         .comments-container{
             position: relative;
+            transition: all ease-in-out 0.5s;
+
             .comment-item{
                 position: relative;
                 z-index: 3;
+                transition: all ease-in-out 0.5s;
 
                 img{
                     display: block;
@@ -848,7 +851,7 @@
                     margin-left: 10px;
                     margin-top: -18px;
                     background-color: white;
-
+                    transition: all ease-in-out 0.5s;
                     .comment-text{
                         color: #5E6282;
                         font-family: 'Poppins', sans-serif;
@@ -869,12 +872,31 @@
                         margin-top: 5px;
                     }
                 }
+
+                // .main-comment-body{
+                //     // animation: swipeout 2s ease-in-out forwards;
+                // }
             }
+
+    
+            @keyframes swipeout {
+                0%{
+                    transform: translate(0, 50px);
+                }
+                100%{
+                    position: absolute;
+                    top: 130px;
+                    z-index: 2;
+                }
+            }
+
+           
 
             .comment-item.background-comment{
                 position: absolute;
                 top: 130px;
                 z-index: 2;
+                // animation: swipein 2s ease-in-out forwards;
 
                 img{
                     display: none;
@@ -886,6 +908,18 @@
                     margin-left: 40px;
                 }
             }
+
+            @keyframes swipein{
+                0%{
+                    transform: translate(0 ,-10px);
+                }
+                100%{
+                    position: relative;
+                     z-index: 3;
+                }
+            }
+
+            
         }
 
         .comment-con-con{

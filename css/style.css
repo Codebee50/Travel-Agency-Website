@@ -738,10 +738,12 @@ button {
 }
 .what-people-say-section .right-content .comments-container {
   position: relative;
+  transition: all ease-in-out 0.5s;
 }
 .what-people-say-section .right-content .comments-container .comment-item {
   position: relative;
   z-index: 3;
+  transition: all ease-in-out 0.5s;
 }
 .what-people-say-section .right-content .comments-container .comment-item img {
   display: block;
@@ -755,6 +757,7 @@ button {
   margin-left: 10px;
   margin-top: -18px;
   background-color: white;
+  transition: all ease-in-out 0.5s;
 }
 .what-people-say-section .right-content .comments-container .comment-item .comment-body .comment-text {
   color: #5E6282;
@@ -773,6 +776,16 @@ button {
   font-size: 14px;
   margin-top: 5px;
 }
+@keyframes swipeout {
+  0% {
+    transform: translate(0, 50px);
+  }
+  100% {
+    position: absolute;
+    top: 130px;
+    z-index: 2;
+  }
+}
 .what-people-say-section .right-content .comments-container .comment-item.background-comment {
   position: absolute;
   top: 130px;
@@ -785,6 +798,15 @@ button {
   box-shadow: none;
   border: 1px solid #f4f4f6;
   margin-left: 40px;
+}
+@keyframes swipein {
+  0% {
+    transform: translate(0, -10px);
+  }
+  100% {
+    position: relative;
+    z-index: 3;
+  }
 }
 .what-people-say-section .right-content .comment-con-con .comments-controller {
   margin-left: 20px;
