@@ -54,7 +54,7 @@ commentList.push(
 
 commentList.push(
   new Comment(
-    "A very professional and reliable travel agency. They expertly planned our family vacation to Disney World and it was an huge blast!.",
+    "A very professional and reliable travel agency. They expertly planned our family vacation to Disney World and it was a huge blast!.",
     "Iris Willow",
     "Founder at Sydtech",
     "background-comment",
