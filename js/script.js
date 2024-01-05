@@ -73,10 +73,7 @@ function populateCommentsUi(comments, backwards = false) {
     (comment) => comment.type === "main-comment"
   );
 
-  if (backwards) {
-    addComment(commentList[mainCommentIndex]);
-    addComment(commentList[mainCommentIndex + 1]);
-  }
+
 
   comments.forEach(function (comment, index) {
     if (comment.type !== "main-comment" && index !== mainCommentIndex + 1)
@@ -84,10 +81,8 @@ function populateCommentsUi(comments, backwards = false) {
     // else mainCommentIndex = index;
   });
 
-  if (!backwards) {
-    addComment(commentList[mainCommentIndex]);
-    addComment(commentList[mainCommentIndex + 1]);
-  }
+  addComment(commentList[mainCommentIndex]);
+  addComment(commentList[mainCommentIndex + 1]);
 
   selectDot(commentList)
 }
@@ -147,7 +142,7 @@ switchCommentDown.addEventListener("click", function () {
         comment.type = "background-comment"; //making the comment at the top a background comment
         nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
 
-        commentList.push(commentList.shift()); //rearaging the array so the comment at the top is now the last
+        commentList.push(commentList.shift()); //removing the element at the top of the list and adding it to the bottom of the list
         setTimeout(() => {
           populateCommentsUi(commentList); //re populating the comment container
         }, 500);
@@ -174,7 +169,7 @@ swtichCommentUp.addEventListener("click", function () {
         comment.type = "background-comment"; //making the comment at the top a background comment
         nextComment.type = "main-comment"; //making the comment below it the main comment i.e switching them
 
-        commentList.push(commentList.shift()); //rearaging the array so the comment at the top is now the last
+        commentList.unshift(commentList.pop()); //removing the element a the bottom of the list and adding it to the top of this list
         setTimeout(() => {
           populateCommentsUi(commentList, true); //re populating the comment container
         }, 500);
